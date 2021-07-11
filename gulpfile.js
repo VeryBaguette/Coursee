@@ -1,15 +1,9 @@
-function defaultTask(cb) {
-  console.log("Hello, Mars!");
-  cb();
-}
-exports.default = defaultTask;
-
-import gulp from "gulp";
+const gulp = require("gulp");
+const bs = require("browser-sync");
 gulp.task("hello", function () {
   console.log("hello, world!");
 });
 
-import bs from "browser-sync";
 bs.create();
 
 gulp.task("browser-sync", function () {
