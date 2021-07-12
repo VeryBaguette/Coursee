@@ -1,16 +1,25 @@
+const { src, dest, watch } = require("gulp");
 const gulp = require("gulp");
-const bs = require("browser-sync");
-gulp.task("hello", function () {
-  console.log("hello, world!");
-});
+const browserSync = require("browser-sync");
+const sass = require("gulp-sass")(require("sass"));
 
-bs.create();
-
-gulp.task("browser-sync", function () {
-  bs.init({
+function bs() {
+  serveSass();
+  browserSync.init({
     server: {
       baseDir: "./",
     },
   });
-  gulp.watch("app/*.html").on("change", bs.reload);
-});
+  watch("./*.html").on("change", browserSync.reload);
+  watch("./js/*.js").on("change", browserSync.reload);
+  watch("./sass/**/*.sass", browserSync.reload);
+}
+
+function serveSass() {
+  return src("./sass/**/*.sass")
+    .pipe(sass())
+    .pipe(dest("./css"))
+    .pipe(browserSync.stream());
+}
+
+exports.serve = bs;
