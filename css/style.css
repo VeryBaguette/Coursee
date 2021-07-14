@@ -258,8 +258,14 @@ input[type=checkbox], input[type=radio] {
   background-color: #E3B873;
   color: #ffffff;
 }
+.button--outline {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto;
 }
@@ -302,10 +308,20 @@ input[type=checkbox], input[type=radio] {
 
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #131313 url("/img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
   padding-top: 100px;
+}
+.hero__content {
+  max-width: 670px;
+}
+.hero__text {
+  font-size: 22px;
+  max-width: 500px;
 }
 .hero__instagram {
   position: absolute;
@@ -313,6 +329,23 @@ input[type=checkbox], input[type=radio] {
   height: 100%;
   left: 0;
   top: 0;
+}
+.hero__button {
+  margin-right: 20px;
+}
+.hero__scroll-down {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  min-width: 247px;
+  min-height: 97px;
+  background-color: #131313;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .instagram {
@@ -330,6 +363,16 @@ input[type=checkbox], input[type=radio] {
 
 .title {
   margin: 0;
+  font-family: Yeseva One;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.title--primary {
+  color: #E3B873;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 body {
