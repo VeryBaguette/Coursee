@@ -265,6 +265,11 @@ input[type=checkbox], input[type=radio] {
 }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
   background-color: #131313;
   padding: 24px 0;
 }
@@ -300,6 +305,7 @@ input[type=checkbox], input[type=radio] {
   background: #131313 url("/img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
+  padding-top: 100px;
 }
 .hero__instagram {
   position: absolute;
