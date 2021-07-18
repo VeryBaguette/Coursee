@@ -569,6 +569,8 @@ img {
 }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   z-index: 199;
   position: fixed;
   top: 0;
@@ -581,6 +583,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
 }
 .modal__dialog {
   position: relative;
@@ -646,7 +652,7 @@ img {
   margin-right: 0.64rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1410px) {
   html {
     font-size: 12px;
   }
