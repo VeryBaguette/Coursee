@@ -7,20 +7,40 @@ body
     font-size: 1rem
 img
     max-width: 100%
+.gay
+    max-width: 31.57rem
 .section
+    &--dark
+        background-color: $dark
+        color: $light
     &-title 
         text-align: center
-        display: flex
-        flex-direction: column
-        align-items: center
-        text-transform: uppercase
-        font-family: 'Yeseva One', cursive
-        &__text
+        &--left
+            text-align: left
+        &__heading  
+            text-transform: uppercase
+            font-family: 'Yeseva One', cursive
+            line-height: 138%
+            &--primary
+                color: $primary
+        &__word
+            display: flex
+            align-items: center
+            &::after
+                content: ''
+                width: 90px
+                height: 2px
+                background-color: $primary
+                margin-left: 2rem
+        &__text1
+            font-size: 1.28rem
+            line-height: 2.07rem
+            width: 100%  
+            max-width: 31.57rem
+        &__text2
             font-family: 'Futura Book', sans-serif
             text-transform: none
             font-size: 1.43rem
-            max-width: 52rem
-            margin-bottom: 2.85rem
         &__image
             display: flex
             justify-content: center
