@@ -24,4 +24,6 @@ $(document).ready(function () {
   var bullets = $(".swiper-pagination");
 
   next.css("left", prev.width() + pagination.width());
+
+  new WOW().init();
 });
